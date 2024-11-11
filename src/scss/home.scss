@@ -1,0 +1,78 @@
+//====================================================================================================
+
+//========================================================================================================================================================
+.title {
+	font-weight: 600;
+	z-index: 2;
+	text-align: center;
+	color: $mainGreyColor;
+	background-color: #fff;
+	padding: toRem(15);
+	border-radius: toRem(24);
+	@include adaptiveValue("font-size", 54, 24);
+}
+
+.comments {
+	background-color: #fff;
+	padding: toRem(15);
+	border-radius: toRem(24);
+	text-align: center;
+	h2 {
+		margin-bottom: toRem(30);
+		@include adaptiveValue("font-size", 48, 18);
+	}
+
+	&__list {
+		max-width: toRem(400);
+		margin: 0 auto;
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: toRem(10);
+		position: relative;
+		padding-left: toRem(20);
+		&::before {
+			position: absolute;
+			top: toRem(10);
+			left: 0;
+			color: $mainBlackColor;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	&__btn {
+		padding: toRem(10);
+		border-radius: toRem(24);
+		background-color: $mainBlackColor;
+		color: #fff;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 5px $mainBlackColor;
+			}
+		}
+	}
+}
+
+.page {
+	&__content {
+		@include adaptiveValue("padding-top", 50, 20);
+		@include adaptiveValue("padding-bottom", 50, 20);
+	}
+}
+
+.content {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+		justify-content: space-between;
+		img {
+			width: 100%;
+			max-width: toRem(900);
+			margin: 0 auto;
+		}
+	}
+}
